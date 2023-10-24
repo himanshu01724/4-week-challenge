@@ -36,6 +36,7 @@ function GridLayout(){
       <b>{data.Title}</b> <br/>
       {data.Year} <br/>
      {data.imdbID}
+     <  img src = {data?.Poster} alt = "" style = {{height:'200px',width:'200px'}}/>
      </div>
     })}
     </div>

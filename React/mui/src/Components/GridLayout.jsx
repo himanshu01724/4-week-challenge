@@ -1,5 +1,6 @@
 import * as React from 'react'
-import {useState, useEffect} from 'react';
+import {useState, useEffect,useContext} from 'react';
+import {DataContext} from "../Context/DataContext"
 
 
 
@@ -10,6 +11,8 @@ function GridLayout(){
     const [isLoading,setIsLoading] = useState(false);
 
     const key = '970c7fd3';
+
+    const {datasharing} = useContext(DataContext);
 
 
     useEffect( ()=>{
@@ -28,7 +31,8 @@ function GridLayout(){
 
     return(
     <>
-    <h1>Himanshu</h1>
+    <h1>Himanshu {datasharing}</h1>
+    <h2>{datasharing}</h2>
     <h4>Card Components  Fetching data dynamically</h4>
     { isLoading ? <loader/> : <div className = "container">
      {cat.map((data,index)=>{

@@ -245,7 +245,7 @@ function getBook(id) {
 // console.log(updateBooks1)
 
 
-const book = getBook(5)
+const book = getBook(1)
 
 const title = data.map((index) =>(
   index.title
@@ -261,4 +261,21 @@ const dummyArr = []
 const barr = data.map((index)=>(
   dummyArr.push(index.author)
 ))
-console.log(dummyArr)
+
+const filterFun = data.filter((book)=>book.pages > 500).map((index)=>index.title)
+
+const testindReduce = data.reduce((val,index)=>val+index.pages,0)
+
+const t = data.map((index)=>(
+  dummyArr.push(index.pages)
+))
+const newArr = dummyArr.slice(0,4)
+
+
+const arr = [19,3,134,18,13,900]
+
+
+const sortingObjects = data.sort((a,b)=>a.pages-b.pages) //objects can be sorted very easily..
+console.log(sortingObjects)
+
+

@@ -4,7 +4,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import Button from '@mui/material/Button';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -12,6 +12,9 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import {DataContext} from "../Context/DataContext"
 
 
 
@@ -155,23 +158,51 @@ const data = [
    
 
 function Testing (){
+
+
+    const { setDataSharing } = useContext(DataContext);
+
     const [age, setAge] = React.useState('');
 
     const [changeClass,setChangeClass] = useState('container');
 
+
     const handleClass = ()=>{
-        setChangeClass(changeClass === 'container'?'containerC':''?'container':'')
+        alert('Data is set')
+        setDataSharing("Himanshu Joshi")
+        // setChangeClass(changeClass === 'container'?'containerC':''?'container':'')
     }
     
-    const handleChange = (e) =>{
-        setAge(e.target.value)
+    const handleChange = () =>{
+      
+    console.log(age)
+      try{
+          if (age === 10) {
+            alert(`Value selected == ${age}`);
+            <Chip label={age} style = {{position:'absolute',top:'100px',alignItems:'right'}}/>
+          }
+          else{
+            alert(age)
+            data.filter((item)=>item.pages>500).map((index)=>(<Stack direction="row" spacing={1} key = {index.id}>
+            <Chip label={index.title} />
+          </Stack>))
+          }
+        }catch(error){
+          console.log(error)
+        }
+      }
         
-    }
+    
+    
+
+
+
     const dumm = [{obj1:'',obj2:'',obj3:''}]
     const finalVal = []
     for(const data in dumm){
         finalVal.push(age)
     }
+
     return(
         <>
         <Box sx={{ minWidth: 120 }}>
@@ -180,7 +211,7 @@ function Testing (){
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            onChange={handleChange}
+            onChange={(e)=>setAge(e.target.value)}
             value={age}
             label="Age"
             
@@ -189,6 +220,7 @@ function Testing (){
             <MenuItem value={20}>Twenty</MenuItem>
             <MenuItem value={30}>Thirty</MenuItem>
           </Select>
+          <Button onClick={handleChange}>Select</Button>
         </FormControl>
       </Box>
       <span className = {changeClass}>

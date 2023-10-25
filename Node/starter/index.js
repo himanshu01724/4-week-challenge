@@ -39,7 +39,19 @@
 // })
 
 //npm install express multer cors
+
+
+// app.get(`/api/v2/tours/:id`,(req,res)=>{
+//   let id = req.params.id;
+//   const val = tourData.find((d)=>d.id == id)
+//   res.header("Access-Control-Allow-Origin","*");
+  
+//   res.send(val)
+// })
+
+
 const express = require('express');
+const fs = require('fs')
 const multer = require('multer');
 const cors = require('cors');
 const app = express();
@@ -73,6 +85,16 @@ app.post('/api/upload', upload.single('excelFile'), (req, res) => {
 
   res.json({ message: 'File uploaded and Saved successfully.' });
 });
+
+
+const tourData = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`))
+
+app.get(`/api/v2/tours`,(req,res)=>{
+
+    res.header("Access-Control-Allow-Origin","*");
+    
+    res.send(tourData)
+})
 
 // Start the server
 app.listen(port, () => {

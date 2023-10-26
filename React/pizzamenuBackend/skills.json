@@ -1,0 +1,26 @@
+[
+    {
+        "skill":"React",
+        "color":"blue"
+    },
+    {
+        "skill":"Javascript",
+        "color":"yellow"
+    },
+    {
+        "skill":"HTML && CSS",
+        "color":"red"
+    },
+    {
+        "skill":"Node",
+        "color":"green"
+    },
+    {
+        "skill":"python",
+        "color":"grey"
+    },
+    {
+        "skill":"AWS",
+        "color":"brown"
+    }
+]

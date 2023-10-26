@@ -8,7 +8,7 @@
     },
     {
       "name": "Pizza Margherita",
-      "ingredients": "Tomato and mozarella",
+      "ingredients": "Tomato and mozarella Cheese",
       "price": 10,
       "photoName": "pizzas/margherita.jpg",
       "soldOut": false

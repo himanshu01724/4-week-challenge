@@ -1,0 +1,332 @@
+An example of a table with expandable rows, revealing more information. It utilizes the Collapse component.
+Do some Research and developement on this
+
+D:\React Dummy Application\feedback-app>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        node_modules/
+        package-lock.json
+        package.json
+        public/
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+D:\React Dummy Application\feedback-app>git add src
+
+D:\React Dummy Application\feedback-app>git commit -m "First-Commit"
+[master (root-commit) 7246f59] First-Commit
+ 9 files changed, 96 insertions(+)
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/index.html
+ create mode 100644 public/logo192.png
+ create mode 100644 public/logo512.png
+ create mode 100644 public/manifest.json
+ create mode 100644 public/robots.txt
+ create mode 100644 src/App.js
+ create mode 100644 src/index.css
+ create mode 100644 src/index.js
+
+
+D:\React Dummy Application\feedback-app>git log
+commit 7246f595cfc3639ae0a83d54cf2c11adf032f062 (HEAD -> master)
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:45:38 2023 +0530
+
+    First-Commit
+
+
+
+D:\React Dummy Application\feedback-app>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/App.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        node_modules/
+        package-lock.json
+        package.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+D:\React Dummy Application\feedback-app\src>git add App.js
+
+D:\React Dummy Application\feedback-app\src>git commit -m "Back to default Application"
+[master b5d4730] Back to default Application
+ 1 file changed, 15 insertions(+), 42 deletions(-)
+ rewrite src/App.js (64%)
+
+D:\React Dummy Application\feedback-app\src>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../README.md
+        ../node_modules/
+        ../package-lock.json
+        ../package.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\React Dummy Application\feedback-app\src>git log
+commit b5d4730d0db07dbfe140d07ac8005da30af35254 (HEAD -> master)
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:53:29 2023 +0530
+
+    Back to default Application
+
+commit 7246f595cfc3639ae0a83d54cf2c11adf032f062
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:45:38 2023 +0530
+
+    First-Commit
+
+D:\React Dummy Application\feedback-app\src>git checkout 7246f595cfc3639ae0a83d54cf2c11adf032f062
+Note: switching to '7246f595cfc3639ae0a83d54cf2c11adf032f062'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 7246f59 First-Commit
+
+D:\React Dummy Application\feedback-app\src>git checkout master
+Previous HEAD position was 7246f59 First-Commit
+Switched to branch 'master'
+
+D:\React Dummy Application\feedback-app\src>git branch dev
+
+D:\React Dummy Application\feedback-app\src>git checkout dev
+Switched to branch 'dev'
+
+D:\React Dummy Application\feedback-app\src>git brach
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+D:\React Dummy Application\feedback-app\src>git branch
+* dev
+  master
+
+D:\React Dummy Application\feedback-app\src>git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../README.md
+        ../node_modules/
+        ../package-lock.json
+        ../package.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\React Dummy Application\feedback-app\src>git add package.json
+fatal: pathspec 'package.json' did not match any files
+
+D:\React Dummy Application\feedback-app\src>cd..
+
+D:\React Dummy Application\feedback-app>git add package.json
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory
+
+D:\React Dummy Application\feedback-app>git commit -m "package json files"
+[dev 64ae9ae] package json files
+ 1 file changed, 38 insertions(+)
+ create mode 100644 package.json
+
+D:\React Dummy Application\feedback-app>git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        node_modules/
+        package-lock.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\React Dummy Application\feedback-app>git log
+commit 64ae9ae4710cb23d4e52029d0e55649e5a7fa06a (HEAD -> dev)
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:59:09 2023 +0530
+
+    package json files
+
+commit b5d4730d0db07dbfe140d07ac8005da30af35254 (master)
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:53:29 2023 +0530
+
+    Back to default Application
+
+commit 7246f595cfc3639ae0a83d54cf2c11adf032f062
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:45:38 2023 +0530
+
+    First-Commit
+
+D:\React Dummy Application\feedback-app>git branch
+* dev
+  master
+
+D:\React Dummy Application\feedback-app>git checkout -b himanshu/feature
+Switched to a new branch 'himanshu/feature'
+
+D:\React Dummy Application\feedback-app>git brach
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+D:\React Dummy Application\feedback-app>git branch
+  dev
+* himanshu/feature
+  master
+
+D:\React Dummy Application\feedback-app>git status
+On branch himanshu/feature
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        node_modules/
+        package-lock.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\React Dummy Application\feedback-app>git add README.md
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+D:\React Dummy Application\feedback-app>git commit -m
+error: switch `m' requires a value
+
+D:\React Dummy Application\feedback-app>git commit -m "Readme files"
+[himanshu/feature 3f13bfe] Readme files
+ 1 file changed, 71 insertions(+)
+ create mode 100644 README.md
+
+D:\React Dummy Application\feedback-app>git checkout master
+Switched to branch 'master'
+
+D:\React Dummy Application\feedback-app>git merge dev
+Updating b5d4730..64ae9ae
+Fast-forward
+ package.json | 38 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 38 insertions(+)
+ create mode 100644 package.json
+
+D:\React Dummy Application\feedback-app>git branch
+  dev
+  himanshu/feature
+* master
+
+D:\React Dummy Application\feedback-app>git merge himanshu/feature
+Updating 64ae9ae..3f13bfe
+Fast-forward
+ README.md | 71 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 71 insertions(+)
+ create mode 100644 README.md
+
+D:\React Dummy Application\feedback-app>git log
+commit 3f13bfe550a29a3299e2a1c464e74480fcfa893b (HEAD -> master, himanshu/feature)
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 19:00:48 2023 +0530
+
+    Readme files
+
+commit 64ae9ae4710cb23d4e52029d0e55649e5a7fa06a (dev)
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:59:09 2023 +0530
+
+    package json files
+
+commit b5d4730d0db07dbfe140d07ac8005da30af35254
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:53:29 2023 +0530
+
+    Back to default Application
+
+commit 7246f595cfc3639ae0a83d54cf2c11adf032f062
+Author: Himanshu Joshi <hj82641@gmail.com>
+Date:   Tue May 23 18:45:38 2023 +0530
+
+    First-Commit
+
+D:\React Dummy Application\feedback-app>git remote -v
+
+D:\React Dummy Application\feedback-app>git remote add origin https://github.com/himanshu01724/feedback-Application.git
+
+D:\React Dummy Application\feedback-app>git remote -v
+origin  https://github.com/himanshu01724/feedback-Application.git (fetch)
+origin  https://github.com/himanshu01724/feedback-Application.git (push)
+
+D:\React Dummy Application\feedback-app>git branch -M main
+
+D:\React Dummy Application\feedback-app>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (23/23), 22.20 KiB | 1.48 MiB/s, done.
+Total 23 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/himanshu01724/feedback-Application.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+D:\React Dummy Application\feedback-app>git checkout dev
+Switched to branch 'dev'
+
+D:\React Dummy Application\feedback-app>git branch
+* dev
+  himanshu/feature
+  main
+
+D:\React Dummy Application\feedback-app>git push -u origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/himanshu01724/feedback-Application/pull/new/dev
+remote:
+To https://github.com/himanshu01724/feedback-Application.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+git init
+git remote -v
+git remote add origin https://github.com/himanshu01724/feedback-Application.git
+git remote -v
+git branch -M main
+git push -u origin main
+git checkout dev
+git branch
+git push -u origin dev
+
+cloning repositories --> git clone -b branch_name URL.
+Pulling changes done by someone in your branch--> Pulling changes
+git pull origin branch_name
+
+
+When a new Branch is created in someone else directory, we can do
+git fetch --all 
+		To update our current directory 

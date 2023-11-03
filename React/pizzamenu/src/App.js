@@ -52,14 +52,13 @@ function App() {
     <div style={{ display: 'flex',height: '1000px',gap:'4rem',justifyContent: 'center', alignItems: 'center',}}>
     {data.reduce((columns, value) => {
       if (columns.length === 0 || columns[columns.length - 1].length >= 3) {
-        columns.push([]); // Start a new column
+        columns.push([]); // Start a new columnƒ
     }
     columns[columns.length - 1].push(value);
     return columns;
     }, []).map((column, columnIndex) => (
        
     <div key={columnIndex} style={{ display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-      
       {column.map((value) => (
         
         <div key={`${value.id}-${value.name}`}>

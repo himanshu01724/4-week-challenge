@@ -1,0 +1,34 @@
+
+.app {
+    width:700px;
+    position: absolute;
+    min-height: 800px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width as needed
+    gap: 20px;
+   */
+   display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto-fill, min-content); /* Adjust column width as needed */
+    gap: 40px;
+  }
+  .animal-card {
+    width: 100%; /* Take up the full width of the grid cell */
+  }
+
+  .load-more-container{
+    width: 150px;
+    height: 100px;
+    align-items: center;
+    position: relative;
+    left: 150%;
+  }
+  .load-more-container button:hover{
+    background-color: cornflowerblue;
+  }
+
+h1{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #363535;
+}

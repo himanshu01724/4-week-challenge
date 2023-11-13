@@ -28,10 +28,17 @@ app.get('/image/:imageName',(req,res)=>{
     res.sendFile(imagePath)
 })
 
-app.get('/animal',(req,res)=>{
-    res.header("Access-Control-Allow-Origin","*")
-    res.send(animals)
+app.get('/animal',(req,res,next)=>{
+    res.header('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
+     res.send(animals)
+    
 })
+
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
+//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//     next();
+//   });
 
 
 app.listen(port,()=>{

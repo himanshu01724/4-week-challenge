@@ -10,7 +10,8 @@ function App(){
 
   async function fetchData(){
     try{
-      const response = await fetch(`http://127.0.0.1:5000/animal`);
+      {/* For Browser Compatibility I have to fetch data from the IPV4 url always*/}
+      const response = await fetch(`http://192.168.1.3:5000/animal`);
       if(!response.ok){
         throw new Error(`Network Error while fetching data`)
       }

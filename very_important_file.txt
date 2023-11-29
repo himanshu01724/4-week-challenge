@@ -1,5 +1,4 @@
-An example of a table with expandable rows, revealing more information. It utilizes the Collapse component.
-Do some Research and developement on this
+Frameworks Exists because to sync the UI along with Data.
 
 D:\React Dummy Application\feedback-app>git status
 On branch master

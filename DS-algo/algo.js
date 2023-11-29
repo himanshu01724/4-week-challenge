@@ -314,45 +314,61 @@
 
 // console.log(productSelf(case0))
 
-const [case0,case1,case2,case3,case4,case5,case6,case7] = [[1,2,3,4],[-1,1,0,-3,3],[2,1,4,6],[1,1,1,3,3,4,3,2,4,2],[0],[3,1],[0,4,5,0,3,6],[2,14,18,22,22]]
 
-const problem5 = function(num){
-    const res = new Array(num.length).fill(1)
-    let prefix = 1
+// const problem5 = function(num){
+//     const res = new Array(num.length).fill(1)
+//     let prefix = 1
 
-    for(let i=0;i<num.length;i++){
-        res[i] = prefix
-        prefix*=num[i]
-    }
-    console.log(res)
-    let postfix = 1
-    for(let i=num.length-1;i>=0;i--){
-        res[i]*= postfix;
-        postfix*=num[i]
-        console.log(res,postfix)
-    }
-    return res
-}
+//     for(let i=0;i<num.length;i++){
+//         res[i] = prefix
+//         prefix*=num[i]
+//     }
+//     console.log(res)
+//     let postfix = 1
+//     for(let i=num.length-1;i>=0;i--){
+//         res[i]*= postfix;
+//         postfix*=num[i]
+//         console.log(res,postfix)
+//     }
+//     return res
+// }
 
 //console.log(problem5(case2))
 
 // const test = new Array(case1.length).fill(1)
 // console.log(test)
 
-var productExceptSelf = function(nums) {
-    const res = new Array(nums.length).fill(1)
-    let prefix = 1
-    for(let i=0;i<nums.length;i++){
-        res[i] = prefix
-        prefix *= nums[i]
-    }
-    let postfix = 1
-    for(let i=nums.length-1;i>=0;i--){
-        res[i]*= postfix;
-        console.log(res)
-        postfix*= nums[i]
-    }
-    return res
- };
+// var productExceptSelf = function(nums) {
+//     const res = new Array(nums.length).fill(1)
+//     let prefix = 1
+//     for(let i=0;i<nums.length;i++){
+//         res[i] = prefix
+//         prefix *= nums[i]
+//     }
+//     let postfix = 1
+//     for(let i=nums.length-1;i>=0;i--){
+//         res[i]*= postfix;
+//         console.log(res)
+//         postfix*= nums[i]
+//     }
+//     return res
+//  };
 
- console.log(productExceptSelf(case0))
+//  console.log(productExceptSelf(case0))
+
+
+const [case0,case1,case2,case3,case4,case5,case6,case7,case8] = [[-2,1,-3,4,-1,2,1,-5,4],[1,2,3,4],[-1,1,0,-3,3],[2,1,4,6],[1,1,1,3,3,4,3,2,4,2],[0],[3,1],[0,4,5,0,3,6],[2,14,18,22,22]]
+
+const maxSubArray = function(nums){
+    let maxSum = nums[0]
+    let currSum = 0
+    for(let i=0;i<nums.length;i++){
+        if (currSum < 0)
+            currSum = 0
+        currSum += nums[i]
+        maxSum = Math.max(currSum,maxSum)
+    }
+    return maxSum
+}
+
+console.log(maxSubArray(case1))

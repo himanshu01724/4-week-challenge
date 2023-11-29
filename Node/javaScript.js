@@ -203,16 +203,16 @@ const data = [
   },
 ];
 
-function getBooks() {
-  return data;
-}
+// function getBooks() {
+//   return data;
+// }
 
 //function for getting the exact bookID based upon the input json.
-function getBook(id) {
-  return data.find((d) => d.id === id);
-}
-
-
+// function getBoook(id) {
+//   return data.find((d) => d.id === id);
+// }
+// const test = getBoook(1)
+// console.log(getBoook(1))
 
 
 
@@ -245,37 +245,114 @@ function getBook(id) {
 // console.log(updateBooks1)
 
 
-const book = getBook(1)
+// const book = getBook(1)
 
-const title = data.map((index) =>(
-  index.title
-))
+// const title = data.map((index) =>(
+//   index.title
+// ))
 
-const bObj = data.map((index)=>(
-  {ObjTitle:index.title,
-  ObjAuthor:index.author}
-))
+// const bObj = data.map((index)=>(
+//   {ObjTitle:index.title,
+//   ObjAuthor:index.author}
+// ))
 
-const dummyArr = []
+// const dummyArr = []
 
-const barr = data.map((index)=>(
-  dummyArr.push(index.author)
-))
+// const barr = data.map((index)=>(
+//   dummyArr.push(index.author)
+// ))
 
-const filterFun = data.filter((book)=>book.pages > 500).map((index)=>index.title)
+// const filterFun = data.filter((book)=>book.pages > 500).map((index)=>index.title)
 
-const testindReduce = data.reduce((val,index)=>val+index.pages,0)
+// const testindReduce = data.reduce((val,index)=>val+index.pages,0)
 
-const t = data.map((index)=>(
-  dummyArr.push(index.pages)
-))
-const newArr = dummyArr.slice(0,4)
-
-
-const arr = [19,3,134,18,13,900]
+// const t = data.map((index)=>(
+//   dummyArr.push(index.pages)
+// ))
+// const newArr = dummyArr.slice(0,4)
 
 
-const sortingObjects = data.sort((a,b)=>a.pages-b.pages) //objects can be sorted very easily..
-console.log(sortingObjects)
+// const arr = [19,3,134,18,13,900]
 
 
+// const sortingObjects = data.sort((a,b)=>a.pages-b.pages) //objects can be sorted very easily..
+// console.log(sortingObjects)
+
+
+// function getBook(id){
+//   return data.find((index)=> index.id==id)
+// }
+// const res = getBook(4)
+
+// const confirm = res.language ? res.reviews : 100;
+
+
+// const confirm2 = res.language || 1000
+
+
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+
+
+const [players1,players2] = [game?.players?.[0],game?.players?.[1]]
+const [gk,...fieldplayers] = players1
+
+
+const allPlayers = [...players1,...players2] //Combining two array using the spread operator
+
+const player1Final = [...players1,'Thiago','Coutinho','Peristic']
+//console.log(player1Final)
+
+const {team1,x:draw,team2} = game.odds
+//console.log(team1,draw,team2)
+
+const play = function(...players){
+  console.log(`${players.length} goal scored`)
+}
+
+play(...game.scored)
+
+game.team1 < game.team2 && console.log(`Team 1 is most likely to Win`)
+game.team1 > game.team2 && console.log(`Team 2 is most likely to Win`)
+
+//And condition checks weather first argument is true or not.

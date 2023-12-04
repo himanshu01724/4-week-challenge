@@ -1,13 +1,16 @@
 import './App.css'
 import { useState } from 'react';
 import Alert from '@mui/material/Alert';
-
+import { IoIosClose } from "react-icons/io";
+import {BrowserRouter,Routes,Route} from "react-router-dom"
+import Date_Counter from './Date_Counter';
 
 
 function App(){
 
 const [step,setStep] = useState(1)
 const [hide,setHide] = useState(false)
+const [hideStep,sethideStep] = useState(true)
 
 const messages = [
     "Learn React ⚛️",
@@ -22,7 +25,7 @@ const handlePrevious = () =>{
         }
         else{
             setHide(false)
-        setStep(step-1)
+        setStep((s)=>s-1)
         }
     }
     catch{
@@ -33,12 +36,23 @@ const handleNext = () =>{
     if(step>=3){
         setHide(true)
     }else{
-    setStep(step+1)
+    setStep((s)=>s+1)
     }
+}
+
+const handleClose = ()=>{
+    sethideStep(!hideStep)
+    
 }
 
 
     return(
+    <>
+        <div className = "close">
+        <IoIosClose onClick={handleClose}/>
+        </div>
+        {
+            hideStep && (
     <div className = "steps">
         <div className = "numbers">
             <div className = {`${step >=1?'active':''}`}>1</div>
@@ -53,8 +67,22 @@ const handleNext = () =>{
             
         </div>
       {hide && (<Alert severity="warning">Follow these steps daily</Alert>)}
-    </div>
-    
+    </div>)
+}
+
+
+<BrowserRouter>
+<Routes>
+<Route exact path = "/dateCounter" element = {
+<Date_Counter/>
+}
+/>
+</Routes>
+</BrowserRouter>
+
+    </>
     )
 }
 export default App;
+
+// It's a good practice to always update the state using a callback function

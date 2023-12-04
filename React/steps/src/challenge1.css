@@ -1,0 +1,14 @@
+body{
+    align-items: center;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container button{
+    display: inline-block;
+    flex: none;
+    align-self: center;
+}

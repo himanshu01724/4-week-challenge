@@ -291,68 +291,70 @@ const data = [
 
 
 
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
 
 
-const [players1,players2] = [game?.players?.[0],game?.players?.[1]]
-const [gk,...fieldplayers] = players1
+// const [players1,players2] = [game?.players?.[0],game?.players?.[1]]
+// const [gk,...fieldplayers] = players1
 
 
-const allPlayers = [...players1,...players2] //Combining two array using the spread operator
+// const allPlayers = [...players1,...players2] //Combining two array using the spread operator
 
-const player1Final = [...players1,'Thiago','Coutinho','Peristic']
-//console.log(player1Final)
+// const player1Final = [...players1,'Thiago','Coutinho','Peristic']
+// //console.log(player1Final)
 
-const {team1,x:draw,team2} = game.odds
-//console.log(team1,draw,team2)
+// const {team1,x:draw,team2} = game.odds
+// //console.log(team1,draw,team2)
 
-const play = function(...players){
-  console.log(`${players.length} goal scored`)
-}
+// const play = function(...players){
+//   console.log(`${players.length} goal scored`)
+// }
 
-play(...game.scored)
+// play(...game.scored)
 
-game.team1 < game.team2 && console.log(`Team 1 is most likely to Win`)
-game.team1 > game.team2 && console.log(`Team 2 is most likely to Win`)
+// game.team1 < game.team2 && console.log(`Team 1 is most likely to Win`)
+// game.team1 > game.team2 && console.log(`Team 2 is most likely to Win`)
 
 //And condition checks weather first argument is true or not.
+
+

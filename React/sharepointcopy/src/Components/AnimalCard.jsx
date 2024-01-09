@@ -1,6 +1,5 @@
 import React from 'react'
-import "./Animal.css"
-import op from '../18226361280.jpeg'
+import "./Styles/Animal.css"
 function AnimalCard(props) {
   return (
     <div className = "Card">

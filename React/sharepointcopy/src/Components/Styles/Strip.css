@@ -1,0 +1,63 @@
+.strip1{
+    height: 500px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+
+.slide1{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+    backdrop-filter: blur(100px);
+   
+}
+
+.substrip1{
+    display: flex;
+    width: calc(250px *12);
+    animation: scroll 40s linear infinite;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+   
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+        backdrop-filter: blur(20px);
+    }
+    100%{
+        transform: translateX(calc(-250px * 12 + 100vw));
+        backdrop-filter: blur(20px);
+    }
+}
+
+img{
+    width: 100%;
+    transition: transform 1s;
+    border-radius: 20px;
+    box-shadow: 0 1px 8px 0 rgba(228, 25, 218, 0.2);
+   
+}
+
+
+img:hover{
+    transform: translateZ(20px);
+}
+
+.strip1 h2{
+    color: brown;
+    animation-name: changeAnimation;
+    animation-duration: 12s;
+}
+
+@keyframes changeAnimation{
+    from{color: blueviolet;}
+    to{color: deeppink;}
+}
